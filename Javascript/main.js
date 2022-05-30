@@ -17,10 +17,9 @@ function start()
         var theFBXButton = document.createElement("button");
         var theOBJButton = document.createElement("button");
         var theImage = document.createElement("img");
-        var theBP = document.createElement("p"), theFBXP = document.createElement("p"), theOBJP = document.createElement("p");
         
         try{
-            theImage.src = "preview\\" + name + "_preview.jpg";
+            theImage.src = "preview/" + name + ".jpg";
             theImage.alt = "image unavailable...";
         } catch(error)
         {
@@ -28,10 +27,8 @@ function start()
         }
         // For the .blend files
         try{
-            theBP.className = "text_style";
-            theBP.innerHTML = "Download .blend";
-            theBLENDButton.appendChild(theBP);
             theBLENDButton.classList.add("hover_button");
+            theBLENDButton.innerHTML = "Download .blend";
             theBLENDA.appendChild(theBLENDButton);
             theBLENDA.href = "downloadables\\BLEND\\" + name + ".blend";
             theBLENDA.download = "downloadables\\BLEND\\" + name + ".blend";
@@ -40,11 +37,10 @@ function start()
 
         }
         // For the .fbx Files
-        try{
-            theFBXP.className = "text_style";
-            theFBXP.innerHTML = "Download .fbx";
-            theFBXButton.appendChild(theFBXP);
+        try
+        {
             theFBXButton.classList.add("hover_button");
+            theFBXButton.innerHTML = "Download .fbx";
             theFBXA.appendChild(theFBXButton);
             theFBXA.href = "downloadables\\FBX\\" + name + ".fbx";
             theFBXA.download = "downloadables\\FBX\\" + name + ".fbx";
@@ -53,11 +49,10 @@ function start()
 
         }
         // For the .obj Files
-        try{
-            theOBJP.className = "text_style";
-            theOBJP.innerHTML = "Download .obj";
-            theOBJButton.appendChild(theOBJP);
+        try
+        {
             theOBJButton.classList.add("hover_button");
+            theOBJButton.innerHTML = "Download .obj";
             theOBJA.appendChild(theOBJButton);
             theOBJA.href = "downloadables\\OBJ\\" + name + ".obj";
             theOBJA.download = "downloadables\\OBJ\\" + name + ".obj";
@@ -65,6 +60,8 @@ function start()
         {
 
         }
+        theDiv.style = "display: block;";
+        theDiv.appendChild(theImage);
         theDiv.appendChild(theBLENDA);
         theDiv.appendChild(theFBXA);
         theDiv.appendChild(theOBJA);
