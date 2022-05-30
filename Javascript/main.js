@@ -19,7 +19,7 @@ function start()
         var theImage = document.createElement("img");
         
         try{
-            theImage.src = "preview/" + name + ".jpg";
+            theImage.src = "https://raw.githubusercontent.com/XCode-MasterX/CG-Collections/main/previews/" + name + ".jpg";
             theImage.alt = "image unavailable...";
             theImage.loading = "eager";
             theDiv.appendChild(theImage);
