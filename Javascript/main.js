@@ -1,6 +1,8 @@
 // The array of names of ALL the downloadables in the site.
 var theNames = ["collections3D_model_kitchen"];
 
+var defaultError = "error.txt";
+
 function start()
 {
     var MainDiv = document.getElementById("BULK");
@@ -21,29 +23,41 @@ function start()
         theImage.alt = "image unavailable...";
 
         // For the .blend files
+        try{
         theBP.className = "text_style";
         theBP.innerHTML = "Download .blend";
         theBLENDButton.appendChild(theBP);
         theBLENDA.appendChild(theBLENDButton);
         theBLENDA.href = "downloadables\\BLEND\\" + name + ".blend";
         theBLENDA.download = "downloadables\\BLEND\\" + name + ".blend";
-        
+        } catch(error)
+        {
+            
+        }
         // For the .fbx Files
+        try{
         theFBXP.className = "text_style";
         theFBXP.innerHTML = "Download .fbx";
         theFBXButton.appendChild(theFBXP);
         theFBXA.appendChild(theFBXButton);
         theFBXA.href = "downloadables\\FBX\\" + name + ".fbx";
         theFBXA.download = "downloadables\\FBX\\" + name + ".fbx";
-        
+        } catch(error)
+        {
+
+        }
         // For the .obj Files
-        theOBJP.className = "text_style";
-        theOBJP.innerHTML = "Download .obj";
-        theOBJButton.appendChild(theOBJP);
-        theOBJA.appendChild(theOBJButton);
-        theOBJA.href = "downloadables\\OBJ\\" + name + ".obj";
-        theOBJA.download = "downloadables\\OBJ\\" + name + ".obj";
-        
+        try{
+            theOBJP.className = "text_style";
+            theOBJP.innerHTML = "Download .obj";
+            theOBJButton.appendChild(theOBJP);
+            theOBJA.appendChild(theOBJButton);
+            theOBJA.href = "downloadables\\OBJ\\" + name + ".obj";
+            theOBJA.download = "downloadables\\OBJ\\" + name + ".obj";
+        } catch(error)
+        {
+
+        }
         theDiv.appendChild(theBLENDA);
         theDiv.appendChild(theFBXA);
         theDiv.appendChild(theOBJA);
