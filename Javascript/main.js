@@ -1,8 +1,6 @@
 // The array of names of ALL the downloadables in the site.
 var theNames = ["collections3D_model_kitchen"];
 
-var defaultError = "error.txt";
-
 function start()
 {
     var MainDiv = document.getElementById("BULK");
