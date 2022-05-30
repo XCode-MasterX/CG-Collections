@@ -18,10 +18,14 @@ function start()
         var theOBJButton = document.createElement("button");
         var theImage = document.createElement("img");
         var theBP = document.createElement("p"), theFBXP = document.createElement("p"), theOBJP = document.createElement("p");
-    
-        theImage.src = "preview\\" + name + "_preview.jpg";
-        theImage.alt = "image unavailable...";
-
+        
+        try{
+            theImage.src = "preview\\" + name + "_preview.jpg";
+            theImage.alt = "image unavailable...";
+        } catch(error)
+        {
+            console.log(error);
+        }
         // For the .blend files
         try{
         theBP.className = "text_style";
@@ -32,7 +36,7 @@ function start()
         theBLENDA.download = "downloadables\\BLEND\\" + name + ".blend";
         } catch(error)
         {
-            
+
         }
         // For the .fbx Files
         try{
