@@ -19,9 +19,10 @@ function start()
         var theImage = document.createElement("img");
         
         try{
-            theImage.src = "https://github.com/XCode-MasterX/CG-Collections/blob/main/previews/collections3D_model_kitchen.jpg";
+            theImage.src = "preview/" + name + ".jpg";
             theImage.alt = "image unavailable...";
-            theImage.loading = "lazy";
+            theImage.loading = "eager";
+            theDiv.appendChild(theImage);
         } catch(error)
         {
             console.log(error);
@@ -61,8 +62,6 @@ function start()
         {
 
         }
-        theDiv.style = "display: block;";
-        theDiv.appendChild(theImage);
         theDiv.appendChild(theBLENDA);
         theDiv.appendChild(theFBXA);
         theDiv.appendChild(theOBJA);
