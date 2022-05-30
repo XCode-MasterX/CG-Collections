@@ -19,8 +19,9 @@ function start()
         var theImage = document.createElement("img");
         
         try{
-            theImage.src = "preview/" + name + ".jpg";
+            theImage.src = "https://github.com/XCode-MasterX/CG-Collections/blob/main/previews/collections3D_model_kitchen.jpg";
             theImage.alt = "image unavailable...";
+            theImage.loading = "lazy";
         } catch(error)
         {
             console.log(error);
