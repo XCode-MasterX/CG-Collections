@@ -1,5 +1,5 @@
 // The array of names of ALL the downloadables in the site.
-var theNames = ["collections3D_model_kitchen"];
+var theNames = ["CGCollections_model_kitchen"];
 
 function start()
 {
@@ -18,9 +18,9 @@ function start()
         
         try{
             theImage.src = "previews/" + name + ".jpg";
-            theImage.alt = "image unavailable...";
+            theImage.alt = "preview unavailable...";
             theImage.loading = "eager";
-            theImage.style = "position: relative; left: -200px;";
+            theImage.style = "position: relative; left: 0px;";
             theDiv.appendChild(theImage);
         } catch(error)
         {
@@ -61,6 +61,8 @@ function start()
         {
 
         }
+        var x = 300 * (ele + 1);
+        theDiv.style = "position: absolute; left: ${x} px";
         theDiv.appendChild(theBLENDA);
         theDiv.appendChild(theFBXA);
         theDiv.appendChild(theOBJA);
