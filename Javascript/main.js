@@ -20,6 +20,7 @@ function start()
             theImage.src = "previews/" + name + ".jpg";
             theImage.alt = "image unavailable...";
             theImage.loading = "eager";
+            theImage.style = "position: relative; left: -200px;";
             theDiv.appendChild(theImage);
         } catch(error)
         {
