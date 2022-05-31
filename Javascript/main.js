@@ -27,7 +27,7 @@ function start()
         theP.style = "margin: 10px;"
         theSubDiv.appendChild(theP);
         try{
-            theImage.src = "previews/" + name + "_previews.jpg";
+            theImage.src = "previews/" + name + "_preview.jpg";
             theImage.style = "position: relative; left: 0px; height: 200px; width: 300px;";
             theDiv.appendChild(theImage);
         } catch(error){}
