@@ -12,7 +12,9 @@ function start()
     {
         var object = theNames[ele];
         var name = object["name"];
-        var theDiv = document.createElement("div"); theDiv.id = theNames[ele];
+        var theDiv = document.createElement("div"), theSubDiv = document.createElement("div"); 
+        theDiv.id = name;
+        theDiv.style = "float: left; margin-top: 4px; margin-bottom: 4px;"
         var theBLENDA = document.createElement("a");
         var theFBXA = document.createElement("a");
         var theOBJA = document.createElement("a");
@@ -20,17 +22,17 @@ function start()
         var theFBXButton = document.createElement("button");
         var theOBJButton = document.createElement("button");
         var theImage = document.createElement("img");
-        
+        var theP = document.createElement("p");
+
+        theP.innerHTML = name + "<br>" + "SIZE: " + object["size"];
+        theP.style = "margin: 10px;"
+        theSubDiv.appendChild(theP);
         try{
             theImage.src = "previews/" + name + "_preview.jpg";
             theImage.alt = "preview unavailable...";
-            theImage.loading = "eager";
-            theImage.style = "position: relative; left: 0px; height: 200px; width: 150px;";
+            theImage.style = "position: relative; left: 0px; height: 200px; width: 300px;";
             theDiv.appendChild(theImage);
-        } catch(error)
-        {
-            console.log(error);
-        }
+        } catch(error){}
         // For the .blend files
         try{
             theBLENDButton.classList.add("hover_button");
@@ -38,10 +40,7 @@ function start()
             theBLENDA.appendChild(theBLENDButton);
             theBLENDA.href = "downloadables\\BLEND\\" + name + ".blend";
             theBLENDA.download = "downloadables\\BLEND\\" + name + ".blend";
-        } catch(error)
-        {
-
-        }
+        } catch(error){}
         // For the .fbx Files
         try
         {
@@ -50,10 +49,7 @@ function start()
             theFBXA.appendChild(theFBXButton);
             theFBXA.href = "downloadables\\FBX\\" + name + ".fbx";
             theFBXA.download = "downloadables\\FBX\\" + name + ".fbx";
-        } catch(error)
-        {
-
-        }
+        } catch(error){}
         // For the .obj Files
         try
         {
@@ -62,13 +58,14 @@ function start()
             theOBJA.appendChild(theOBJButton);
             theOBJA.href = "downloadables\\OBJ\\" + name + ".obj";
             theOBJA.download = "downloadables\\OBJ\\" + name + ".obj";
-        } catch(error)
-        {
+            theOBJA.style = "position: relative; top: 45px; left: -330px;"
+        } catch(error){}
 
-        }
-        theDiv.appendChild(theBLENDA);
-        theDiv.appendChild(theFBXA);
-        theDiv.appendChild(theOBJA);
+        theSubDiv.appendChild(theBLENDA);
+        theSubDiv.appendChild(theFBXA);
+        theSubDiv.appendChild(theOBJA);
+        theSubDiv.style = "float: right;";
+        theDiv.appendChild(theSubDiv);
 
         MainDiv.appendChild(theDiv);
     }
