@@ -28,7 +28,7 @@ function start()
         // For the .blend files
         try{
             theBLENDButton.classList.add("hover_button");
-            theBLENDButton.innerHTML = "Download .blend";
+            theBLENDButton.innerHTML = "DOWNLOAD .blend";
             theBLENDA.appendChild(theBLENDButton);
             theBLENDA.href = "downloadables\\BLEND\\" + name + ".blend";
             theBLENDA.download = "downloadables\\BLEND\\" + name + ".blend";
@@ -40,7 +40,7 @@ function start()
         try
         {
             theFBXButton.classList.add("hover_button");
-            theFBXButton.innerHTML = "Download .fbx";
+            theFBXButton.innerHTML = "DOWNLOAD .fbx";
             theFBXA.appendChild(theFBXButton);
             theFBXA.href = "downloadables\\FBX\\" + name + ".fbx";
             theFBXA.download = "downloadables\\FBX\\" + name + ".fbx";
@@ -52,7 +52,7 @@ function start()
         try
         {
             theOBJButton.classList.add("hover_button");
-            theOBJButton.innerHTML = "Download .obj";
+            theOBJButton.innerHTML = "DOWNLOAD .obj";
             theOBJA.appendChild(theOBJButton);
             theOBJA.href = "downloadables\\OBJ\\" + name + ".obj";
             theOBJA.download = "downloadables\\OBJ\\" + name + ".obj";
