@@ -3,7 +3,6 @@ var theNames = [
     {"name" : "CGCollections_model_kitchen",
      "size" : "100KB"}
 ];
-var f = new FileReader();
 
 function start()
 {
@@ -28,8 +27,7 @@ function start()
         theP.style = "margin: 10px;"
         theSubDiv.appendChild(theP);
         try{
-            theImage.src = "previews/" + name + "_preview.jpg";
-            theImage.alt = "preview unavailable...";
+            theImage.src = "previews/" + name + "_previews.jpg";
             theImage.style = "position: relative; left: 0px; height: 200px; width: 300px;";
             theDiv.appendChild(theImage);
         } catch(error){}
@@ -64,7 +62,7 @@ function start()
         theSubDiv.appendChild(theBLENDA);
         theSubDiv.appendChild(theFBXA);
         theSubDiv.appendChild(theOBJA);
-        theSubDiv.style = "float: right;";
+        theSubDiv.style = "float: right; margin-left: 4px;";
         theDiv.appendChild(theSubDiv);
 
         MainDiv.appendChild(theDiv);
