@@ -1,12 +1,17 @@
 // The array of names of ALL the downloadables in the site.
-var theNames = ["CGCollections_model_kitchen"];
+var theNames = [
+    {"name" : "CGCollections_model_kitchen",
+     "size" : "100KB"}
+];
+var f = new FileReader();
 
 function start()
 {
     var MainDiv = document.getElementById("BULK");
     for (let ele = 0; ele < theNames.length; ele++) 
     {
-        var name = theNames[ele];
+        var object = theNames[ele];
+        var name = object["name"];
         var theDiv = document.createElement("div"); theDiv.id = theNames[ele];
         var theBLENDA = document.createElement("a");
         var theFBXA = document.createElement("a");
@@ -17,10 +22,10 @@ function start()
         var theImage = document.createElement("img");
         
         try{
-            theImage.src = "previews/" + name + ".jpg";
+            theImage.src = "previews/" + name + "_preview.jpg";
             theImage.alt = "preview unavailable...";
             theImage.loading = "eager";
-            theImage.style = "position: relative; left: 0px;";
+            theImage.style = "position: relative; left: 0px; height: 200px; width: 150px;";
             theDiv.appendChild(theImage);
         } catch(error)
         {
@@ -61,8 +66,6 @@ function start()
         {
 
         }
-        var x = 300 * (ele + 1);
-        theDiv.style = "position: absolute; left: ${x} px";
         theDiv.appendChild(theBLENDA);
         theDiv.appendChild(theFBXA);
         theDiv.appendChild(theOBJA);
