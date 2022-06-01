@@ -13,7 +13,7 @@ function start()
         var name = object["name"];
         var theDiv = document.createElement("div"), theSubDiv = document.createElement("div"); 
         theDiv.id = name;
-        theDiv.style = "float: left; margin-top: 4px; margin-bottom: 4px;"
+        theDiv.style = "float: left; border: 3px solid rgb(116, 179, 120); border-radius: 10px; margin-top: 4px; margin-bottom: 4px;"
         var theBLENDA = document.createElement("a");
         var theFBXA = document.createElement("a");
         var theOBJA = document.createElement("a");
@@ -27,8 +27,8 @@ function start()
         theP.style = "margin: 10px;"
         theSubDiv.appendChild(theP);
         try{
-            theImage.src = "previews/" + name + "_preview.jpg";
-            theImage.style = "position: relative; left: 0px; height: 200px; width: 300px;";
+            theImage.src = "previews/" + name + "_previews.jpg";
+            theImage.style = "position: relative; left: 3px; height: 250px; width: 350px;";
             theDiv.appendChild(theImage);
         } catch(error){}
         // For the .blend files
@@ -62,7 +62,7 @@ function start()
         theSubDiv.appendChild(theBLENDA);
         theSubDiv.appendChild(theFBXA);
         theSubDiv.appendChild(theOBJA);
-        theSubDiv.style = "float: right; margin-left: 4px;";
+        theSubDiv.style = "float: right; margin-left: 4px; position: relative; left: 5px;";
         theDiv.appendChild(theSubDiv);
 
         MainDiv.appendChild(theDiv);
