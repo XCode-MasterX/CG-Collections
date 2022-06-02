@@ -8,7 +8,58 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100;1,300&family=Raleway&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="well.css">
         <style>
-            button {margin: 2px; text-align: center; width: 150px; height: 100px; font-size: 20px;}
+            *{
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 30px 10%;
+                background-color: #ffffff;
+            }
+            button {
+                margin: 2px; 
+                text-align: center; 
+                width: 150px; 
+                height: 100px; 
+                font-size: 20px;
+                cursor: pointer;
+            }
+            li, a {
+                text-decoration: underline;
+                color: #ff004c;
+            }
+            .logo {
+                cursor: pointer;
+            }
+            .links {
+                list-style: none;
+            }
+            .links li {
+                display: inline-block;
+            }
+            .links li a {
+                transition: all 0.4s ease 0s;
+            }
+            .links li a:hover {
+                color: #0088a9;
+            }
+            .nav_button {
+                color: #ffffff;
+                background-color: #0354beff;
+                border-radius: 5px;
+                transition: 0.6s;
+                padding: 0;
+                width: 100px;
+                height: 40px;
+            }
+            .nav_button:hover{
+                background-color: #0354be9d;
+                border-radius: 20px;
+            }
             .models_button{
                 background-color: #ffffff; 
                 color: #c76f0b; 
@@ -17,7 +68,9 @@
                 font-family: Georgia, 'Times New Roman', Times, serif;
                 font-style: italic;
                 padding: 30px;
+                transition-duration: 0.8s ease;
             }
+            .models_button:hover {color: #ffffff; background-image: linear-gradient(to bottom, #e97b15 0%, #f59133 100%);}
             .textures_button{
                 background-color: #ffffff; 
                 color: #0bc743; 
@@ -38,8 +91,21 @@
     </head>
 
     <body>
-        <div>
-            <div id="links container" style="display: block; position: center;">
+        <header>
+            <a href="index.html"><img class = "logo" src = "logo.png" alt="image unavailable" style = "width: 100px; height: 100px;"></img></a>
+            <nav>
+                <ul class = "links">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </nav>
+            <a href="#"><button class="nav_button">About</button></a>
+        </header>
+
+        <div id = "Page Content">
+            <div id="Link Content" style="display: block; position: center;">
                 <a href = "models.html"><button class = "models_button">Models</button></a>
                 <a href = "textures.html"><button class = "textures_button">Textures</button></a>
                 <br>
