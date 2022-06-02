@@ -6,58 +6,48 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100;1,300&family=Raleway&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="well.css">
         <style>
-            .hover_button
-            {
-                background-image: linear-gradient(to bottom, #fc9c1f 0%, #c57000 100%);
-                border-radius: 20px;
-                border: 3px solid rgb(228, 126, 10);
-                color: rgb(243, 175, 73);
-                text-shadow: -1px -1px 0 #000, 0.75px -0.75px 0 #000, -0.5px 0.5px 0 #000, 0.5px 0.5px 0 #000;
-                padding-top: 0.01em;
-                padding-bottom: 0.01em;
-                padding-left: 0.1em;
-                padding-right: 0.1em;
-                font-size: 20px;
-                margin: 2px;
-                transition-duration: 0.4s;
-                width: 220px;
-                height: 40px;
-                text-align: center;
-                font-family: 'Raleway', sans-serif;
-                font-size: 16; 
-                font-weight: bold;
-                text-decoration: none;
+            .models_button{
+                background-image: url(previews/CGCollections_model_kitchen_preview.jpg); 
+                text-shadow: -1px -1px 0 #000, 0.75px -0.75px 0 #000, -0.5px 0.5px 0 #000, 0.5px 0.5px 0 #000; 
+                color: #c76f0b; 
+                border-radius: 5px; 
+                border: 5px solid #c76f0b; 
+                padding: 30px;
             }
-            .hover_button:hover 
-            {
-                box-shadow: 0 5px 5px 0 rgba(209, 130, 65, 0.6), 0 5px 5px 0 rgba(209, 130, 65, 0.6);
-                background-image: linear-gradient(to bottom, #c57000 0%,  #fc9c1f 100%) !important;
-                border: rgb(255, 115, 0) !important;
+            .textures_button{
+                background-image: url(previews/CGCollections_model_kitchen_preview.jpg); 
+                text-shadow: -1px -1px 0 #000, 0.75px -0.75px 0 #000, -0.5px 0.5px 0 #000, 0.5px 0.5px 0 #000; 
+                color: #0bc743; 
+                border-radius: 5px; 
+                border: 5px solid #0bc743; 
+                padding: 30px;
             }
-            p { 
-                font-family: 'Raleway', sans-serif;
-                color:rgb(241, 139, 121);
-                border-radius: 10px;
-                width: 500px;
-                padding: 10px;
-                text-shadow: -1px -1px 0 #000, 0.75px -0.75px 0 #000, -0.5px 0.5px 0 #000, 0.5px 0.5px 0 #000;
-            }
-            img {
-                background-image: url("https://www.thermaxglobal.com/wp-content/uploads/2020/05/image-not-found.jpg");
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: 100%;
-                border-radius: 8px;
-                border: 2px solid black;
+            .surfaces_button{
+                background-image: url(previews/CGCollections_model_kitchen_preview.jpg); 
+                text-shadow: -1px -1px 0 #000, 0.75px -0.75px 0 #000, -0.5px 0.5px 0 #000, 0.5px 0.5px 0 #000; 
+                color: #9b0bc7; 
+                border-radius: 5px; 
+                border: 5px solid #9b0bc7; 
+                padding: 20px;
             }
         </style>
 
-        <script src="Javascript\main.js"></script>
     </head>
 
-    <body onload="start()" style="background-color: #474747;">
-        <div id="BULK" style="display: block;">
+    <body>
+        <div>
+            <div id="links container" style="display: block; position: center;">
+                <a href = "models.html"><button class = "models_button">Models</button></a>
+                <a href = "textures.html"><button class = "textures_button">Textures</button></a>
+                <br>
+                <a href = "decals.html"><button class = "models_button">Decals</button></a>
+                <a href = "alphas.html"><button class = "models_button">Alphas</button></a>
+                <br>
+                <a href = "surface_imperfections.html"><button class = "surfaces_button">Surface <br> Imperfections</button></a>
+                <a href = "models.html"><button class = "models_button">Models</button></a>
+            </div>
         </div>
     </body>
 </html>
