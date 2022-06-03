@@ -1,5 +1,5 @@
 .hover_button{
-    background-image: linear-gradient(to bottom, #fc9c1f 0%, #c57000 100%);
+    background-image: linear-gradient(to top, #fc9c1f 0%,  #c57000 50%, #fc9c1f 100%);
     border-radius: 20px;
     border: 3px solid rgb(228, 126, 10);
     color: rgb(243, 175, 73);
@@ -21,7 +21,7 @@
 }
 .hover_button:hover {
     box-shadow: 0 5px 5px 0 rgba(209, 130, 65, 0.6), 0 5px 5px 0 rgba(209, 130, 65, 0.6);
-    background-image: linear-gradient(to bottom, #c57000 0%,  #fc9c1f 100%) !important;
+    background-image: linear-gradient(to bottom, #c57000 0%,  #fc9c1f 50%, #c57000 100%) !important;
     border: rgb(255, 115, 0) !important;
 }
 p { 
