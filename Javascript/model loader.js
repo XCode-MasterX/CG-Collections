@@ -21,11 +21,13 @@ function start()
         var theBLENDButton = document.createElement("button");
         var theFBXButton = document.createElement("button");
         var theOBJButton = document.createElement("button");
+        var theMVB = document.createElement("button");
+        var theMVBA = document.createElement("a");
         var theImage = document.createElement("img");
         var theP = document.createElement("p");
 
-        theP.innerHTML = name + "<br>" + "SIZE: " + object["size"];
-        theP.style = "margin: 10px;"
+        theP.innerHTML = object['name'] + "<br>" + "SIZE: " + object["size"];
+        theP.style = "margin: 10px;";
         theSubDiv.appendChild(theP);
         try{
             theImage.src = "previews/CGCollections_models" + name + "_previews.jpg";
@@ -59,11 +61,19 @@ function start()
             theOBJA.download = "model downloadables\\OBJ\\" + name + ".obj";
             //theOBJA.style = "position: relative; top: 45px; left: -330px;"
         } catch(error){}
-
+        theMVB.addEventListener("click", function() 
+        {
+            localStorage.setItem("model-name", object['name']);
+        });
+        theMVB.innerHTML = "View model in 3D";
+        theMVB.classList.add("hover_button");
+        theMVBA.appendChild(theMVB);
+        theMVBA.href = "model_viewing.html";
         theSubDiv.appendChild(theBLENDA);
         theSubDiv.appendChild(theFBXA);
         theSubDiv.appendChild(document.createElement("br"));
         theSubDiv.appendChild(theOBJA);
+        theSubDiv.appendChild(theMVBA);
         theSubDiv.style = "float: right; position: relative; left: -50px; width: 480px;";
         theDiv.appendChild(theSubDiv);
 
