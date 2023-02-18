@@ -1,1 +1,1 @@
-# CG-Collections
+Hello, this is just a trial
