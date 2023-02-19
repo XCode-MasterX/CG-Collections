@@ -1,4 +1,5 @@
 Poster: null
-Title: test for adding a comment
 Type: Demand
-Content: make a comment, and let's test it.
+Title: test for adding a comment
+Description: make a comment, and let's test it.
+Claimed: NewUser
